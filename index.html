@@ -4,46 +4,92 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>શ્રી કૃષ્ણ વિરાણી પ્રાકૃતિક ફાર્મ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Noto Sans Gujarati', sans-serif;
-      background-color: #f5fff3;
+      margin: 0;
+      background-color: #eef9ee;
       color: #1f3c1f;
-      line-height: 1.6;
-      padding: 20px;
     }
+
+    .header {
+      background: linear-gradient(135deg, #a8e063, #56ab2f);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 5px solid #4b8b3b;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
+      padding: 30px 20px;
+    }
+
+    h2 {
+      color: #2f6e24;
+      margin-top: 30px;
+    }
+
+    .card {
       background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 15px;
     }
-    h1, h2 {
-      color: #317a1e;
-    }
-    .contact, .products {
-      margin-top: 20px;
-    }
+
     ul {
       padding-left: 20px;
+      margin: 0;
     }
+
     .footer {
-      margin-top: 30px;
+      background-color: #d8ead8;
+      text-align: center;
+      padding: 15px;
       font-size: 0.9em;
-      color: #666;
+      color: #444;
+      margin-top: 40px;
+    }
+
+    .contact p {
+      margin: 6px 0;
+    }
+
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 1.8rem;
+      }
+
+      .container {
+        padding: 20px 15px;
+      }
     }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
+
+  <div class="header">
     <h1>શ્રી કૃષ્ણ વિરાણી પ્રાકૃતિક ફાર્મ</h1>
     <p>તમારું સ્વાસ્થ્ય અમારું ધ્યેય</p>
+  </div>
 
-    <div class="products">
-      <h2>ઉપલબ્ધ પ્રાકૃતિક ઉત્પાદનો:</h2>
+  <div class="container">
+
+    <div class="card products">
+      <h2>ઉપલબ્ધ પ્રાકૃતિક ઉત્પાદનો</h2>
       <ul>
         <li>ગીર ગાયનું શુદ્ધ ઘી</li>
         <li>શીંગતેલ</li>
@@ -56,16 +102,18 @@
       </ul>
     </div>
 
-    <div class="contact">
-      <h2>સંપર્ક કરો:</h2>
-      <p><strong>બાબુભાઈ વિરાણી:</strong> 99797 78896<br>
-         <strong>રહમાનભાઈ વિરાણી:</strong> 92657 94797</p>
+    <div class="card contact">
+      <h2>સંપર્ક કરો</h2>
+      <p><strong>બાબુભાઈ વિરાણી:</strong> 99797 78896</p>
+      <p><strong>રહમાનભાઈ વિરાણી:</strong> 92657 94797</p>
       <p><strong>સ્થળ:</strong> મુ. રતીયાણા, તા. ગઢડા (સ્વા), જી. બોટાદ</p>
     </div>
 
-    <div class="footer">
-      <p>© શ્રી કૃષ્ણ વિરાણી પ્રાકૃતિક ફાર્મ | CER No: ORG/SC/2107/003131</p>
-    </div>
   </div>
+
+  <div class="footer">
+    <p>© શ્રી કૃષ્ણ વિરાણી પ્રાકૃતિક ફાર્મ | CER No: ORG/SC/2107/003131</p>
+  </div>
+
 </body>
 </html>
