@@ -7,6 +7,16 @@
     <meta name="description" content="SKV - Organic Farm Products" />
     <link rel="icon" href="/icon.svg" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .clickable-card {
+        transition: transform 0.2s ease, background-color 0.2s ease;
+        cursor: pointer;
+      }
+      .clickable-card:hover {
+        transform: scale(1.05);
+        background-color: #bbf7d0; /* lighter green */
+      }
+    </style>
   </head>
   <body class="bg-gradient-to-br from-teal-500 to-cyan-600 antialiased min-h-screen flex items-center justify-center p-6">
 
@@ -36,19 +46,19 @@
       <!-- Products -->
       <h2 class="text-xl font-semibold text-green-800 mb-3">Products</h2>
       <div class="flex flex-wrap justify-center gap-4 mb-6">
-        <div class="bg-green-100 rounded-lg px-4 py-3 w-28 flex flex-col items-center">
+        <div onclick="window.location.href='https://wa.me/919977788996?text=I%20want%20Desi%20Ghee'" class="bg-green-100 rounded-lg px-4 py-3 w-28 flex flex-col items-center clickable-card">
           <span class="text-3xl">🧈</span>
           <span class="text-sm mt-1">દેસી ઘી</span>
         </div>
-        <div class="bg-green-100 rounded-lg px-4 py-3 w-28 flex flex-col items-center">
+        <div onclick="window.location.href='https://wa.me/919977788996?text=I%20want%20Herbal%20Powder'" class="bg-green-100 rounded-lg px-4 py-3 w-28 flex flex-col items-center clickable-card">
           <span class="text-3xl">🌿</span>
           <span class="text-sm mt-1">હર્બલ પાવડર</span>
         </div>
-        <div class="bg-green-100 rounded-lg px-4 py-3 w-28 flex flex-col items-center">
+        <div onclick="window.location.href='https://wa.me/919977788996?text=I%20want%20Hadser%20Powder'" class="bg-green-100 rounded-lg px-4 py-3 w-28 flex flex-col items-center clickable-card">
           <span class="text-3xl">🍚</span>
           <span class="text-sm mt-1">હડસર પાવડર</span>
         </div>
-        <div class="bg-green-100 rounded-lg px-4 py-3 w-28 flex flex-col items-center">
+        <div onclick="window.location.href='https://wa.me/919977788996?text=I%20want%20Jeeru'" class="bg-green-100 rounded-lg px-4 py-3 w-28 flex flex-col items-center clickable-card">
           <span class="text-3xl">🌾</span>
           <span class="text-sm mt-1">જીરૂ</span>
         </div>
