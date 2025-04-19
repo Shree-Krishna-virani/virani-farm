@@ -1,106 +1,72 @@
 <!DOCTYPE html>
-<html lang="gu">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shri Krishna Virani Natural Farm</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Noto Sans Gujarati', sans-serif;
-      background-color: #f8f8f5;
-      color: #1b3d1f;
-    }
-    header {
-      background-color: #1b5e20;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      margin: 5px 0 0;
-      font-size: 1.2rem;
-    }
-    .section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .section h2 {
-      color: #2e7d32;
-      border-bottom: 2px solid #c8e6c9;
-      padding-bottom: 10px;
-    }
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-    .product {
-      background-color: #ffffff;
-      border: 1px solid #d0e4d2;
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-    footer {
-      background-color: #e8f5e9;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.95rem;
-    }
-    .contact {
-      margin-top: 15px;
-      line-height: 1.6;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>શ્રી કૃષ્ણ વિરાણી</h1>
-    <p>પ્રાકૃતિક ફાર્મ – તમારું સ્વાસ્થ્ય અમારું ધ્યેય</p>
-  </header>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shree Krishna Virashi</title>
+    <meta name="description" content="SKV - Organic Farm Products" />
+    <link rel="icon" href="/icon.svg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gradient-to-br from-teal-500 to-cyan-600 antialiased min-h-screen flex items-center justify-center p-6">
 
-  <section class="section">
-    <h2>અમારા વિષે</h2>
-    <p>
-      શ્રી કૃષ્ણ વિરાણી પ્રાકૃતિક ફાર્મ એક એવી જગ્યા છે જ્યાં પ્રાકૃતિક પદ્ધતિથી ગૌ આધારિત ઉત્પાદન થાય છે.
-      દેશી ગાયના ઘીથી લઇને વિવિધ પ્રકારની પાવડરો સુધી, તમારા આરોગ્ય માટે શ્રેષ્ઠ વસ્તુઓ અહીં મળે છે.
-    </p>
-  </section>
+    <div class="max-w-2xl w-full bg-white/90 backdrop-blur rounded-2xl p-6 shadow-2xl text-center relative">
+      <!-- Logo -->
+      <div class="flex justify-center mb-4">
+        <img src="e1e81495-6518-4044-a088-dd68c7d9cabb.png" alt="SKV Logo" class="w-32 h-auto" />
+      </div>
 
-  <section class="section">
-    <h2>ઉત્પાદનો</h2>
-    <div class="products">
-      <div class="product">દેશી ગાયનું ઘી</div>
-      <div class="product">ધીના પીંડ</div>
-      <div class="product">અનાજ, મસાલા</div>
-      <div class="product">સરગવાની પાવડર</div>
-      <div class="product">જમીકંદ પાવડર</div>
-      <div class="product">ગમ્મત ચાસણી</div>
+      <!-- Title -->
+      <h1 class="text-2xl md:text-3xl font-bold text-green-900 mb-2">શ્રી કૃષ્ણ વિરાશી</h1>
+
+      <!-- About -->
+      <div class="text-sm md:text-base text-gray-800 mb-4">
+        <h2 class="text-xl font-semibold text-green-800 mb-2">About</h2>
+        શ્રી ફાર્મમાં માથીમરક ધોબ પુષ્પક ઘીઓ પાવડર છે.<br />
+        જેમાં કડકાઈ ભરપૂર ગાયરીતલ સત્યસુદે સ્વાસ્થ્યય જાળવવામાં ફુલ્સટપ થયા<br />
+        વેગી ગરાવ મરાઠારા બંધાય.
+      </div>
+
+      <!-- Certificates -->
+      <div class="bg-green-100 text-green-800 font-medium text-sm py-2 px-4 mb-6 inline-block rounded">
+        CER No. ORGISC/210700331A<br />
+        Farm No. GJ43005147001
+      </div>
+
+      <!-- Products -->
+      <h2 class="text-xl font-semibold text-green-800 mb-3">Products</h2>
+      <div class="flex flex-wrap justify-center gap-4 mb-6">
+        <div class="bg-green-100 rounded-lg px-4 py-3 w-28 flex flex-col items-center">
+          <span class="text-3xl">🧈</span>
+          <span class="text-sm mt-1">દેસી ઘી</span>
+        </div>
+        <div class="bg-green-100 rounded-lg px-4 py-3 w-28 flex flex-col items-center">
+          <span class="text-3xl">🌿</span>
+          <span class="text-sm mt-1">હર્બલ પાવડર</span>
+        </div>
+        <div class="bg-green-100 rounded-lg px-4 py-3 w-28 flex flex-col items-center">
+          <span class="text-3xl">🍚</span>
+          <span class="text-sm mt-1">હડસર પાવડર</span>
+        </div>
+        <div class="bg-green-100 rounded-lg px-4 py-3 w-28 flex flex-col items-center">
+          <span class="text-3xl">🌾</span>
+          <span class="text-sm mt-1">જીરૂ</span>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <h2 class="text-xl font-semibold text-green-800 mb-2">Contact</h2>
+      <div class="text-gray-800 text-sm space-y-2">
+        <div>
+          <strong>Babulal Virashi</strong> | રેફરન્સ<br />
+          <a href="tel:+919977788996">+91 99777 88996</a>
+        </div>
+        <div>
+          <strong>Manu Virashi</strong> | મંડળીધમપુરાણ<br />
+          <a href="tel:+919265794797">+91 92657 94797</a>
+        </div>
+      </div>
     </div>
-  </section>
 
-  <section class="section">
-    <h2>સંપર્ક કરો</h2>
-    <div class="contact">
-      બાબુભાઈ વિરાણી – 99797 78896<br>
-      રહમેન વિરાણી – 92657 94797<br>
-      કેઉર વિરાણી (સુરત) – 81285 84184<br>
-      સ્થળ: મુ. રણીયાણા, તાલુકો ગઢડા (સ્વા), જી. બોટાદ
-    </div>
-  </section>
-
-  <footer>
-    CER No.ORG/SC/2107/003131A | Farm No.GJ143005147001<br>
-    © શ્રી કૃષ્ણ વિરાણી પ્રાકૃતિક ફાર્મ
-  </footer>
-</body>
+  </body>
 </html>
