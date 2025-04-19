@@ -18,6 +18,58 @@
       }
     </style>
   </head>
+  <script>
+  function contactOnWhatsApp(product) {
+    // Supported languages
+    const languages = {
+      1: 'gu',
+      2: 'hi',
+      3: 'en'
+    };
+
+    // Predefined messages per product and language
+    const messages = {
+      ghee: {
+        gu: "હાય! મને દેશી ઘી વિશે માહિતી જોઈતી હતી.",
+        hi: "नमस्ते! मुझे देसी घी के बारे में जानकारी चाहिए।",
+        en: "Hi! I would like to know more about Desi Ghee."
+      },
+      herbal: {
+        gu: "હાય! મને હર્બલ પાવડર વિશે માહિતી જોઈતી હતી.",
+        hi: "नमस्ते! मुझे हर्बल पाउडर के बारे में जानकारी चाहिए।",
+        en: "Hi! I would like to know more about Herbal Powder."
+      },
+      hadsar: {
+        gu: "હાય! મને હડસર પાવડર વિશે માહિતી જોઈતી હતી.",
+        hi: "नमस्ते! मुझे हडसर पाउडर के बारे में जानकारी चाहिए।",
+        en: "Hi! I would like to know more about Hadsar Powder."
+      },
+      jeeru: {
+        gu: "હાય! મને જીરૂ વિશે માહિતી જોઈતી હતી.",
+        hi: "नमस्ते! मुझे जीरा के बारे में जानकारी चाहिए।",
+        en: "Hi! I would like to know more about Jeera."
+      }
+    };
+
+    // Ask user to select a language
+    const input = prompt("Select Language:\n1 - Gujarati\n2 - Hindi\n3 - English");
+
+    // Handle invalid input
+    if (!input || !['1', '2', '3'].includes(input)) {
+      alert("Invalid input. Please enter 1, 2, or 3.");
+      return;
+    }
+
+    // Get selected language
+    const lang = languages[input];
+
+    // Encode message and redirect to WhatsApp
+    const message = encodeURIComponent(messages[product][lang]);
+    const phoneNumber = "918128584184"; // Replace with your actual WhatsApp number
+    window.location.href = `https://wa.me/${phoneNumber}?text=${message}`;
+  }
+</script>
+
   <body class="bg-gradient-to-br from-teal-500 to-cyan-600 antialiased min-h-screen flex items-center justify-center p-6">
 
     <div class="max-w-2xl w-full bg-white/90 backdrop-blur rounded-2xl p-6 shadow-2xl text-center relative">
