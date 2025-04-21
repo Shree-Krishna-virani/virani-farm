@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Shree Krishna Virani</title>
     <meta name="description" content="SKV - Organic Farm Products" />
-    <link rel="icon" href="/icon.svg" />
+    <link rel="icon" href="images/logo.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       .clickable-card {
@@ -19,7 +19,12 @@
     </style>
     <script>
       function contactOnWhatsApp(product) {
-        const languages = { 1: 'gu', 2: 'hi', 3: 'en' };
+        const languages = {
+          1: 'gu',
+          2: 'hi',
+          3: 'en'
+        };
+
         const messages = {
           ghee: {
             gu: "હાય! મને દેશી ઘી વિશે માહિતી જોઈતી હતી.",
@@ -32,7 +37,7 @@
             en: "Hi! I would like to know more about Herbal Powder."
           },
           hadsar: {
-            gu: "હાય! મને હળદ પાવડર વિશે માહિતી જોઈતી હતી.",
+            gu: "હાય! મને હળદર પાવડર વિશે માહિતી જોઈતી હતી.",
             hi: "नमस्ते! मुझे हलद पाउडर के बारे में जानकारी चाहिए।",
             en: "Hi! I would like to know more about Turmeric Powder."
           },
@@ -51,7 +56,7 @@
         }
 
         const lang = languages[input];
-        const message = encodeURIComponent(messages[product][lang]);
+        const message = encodeURIComponent(messages[product] ? messages[product][lang] : "Hi! I would like to know more about your product.");
         const phoneNumber = "918128584184";
         window.location.href = `https://wa.me/${phoneNumber}?text=${message}`;
       }
@@ -61,18 +66,17 @@
   <body class="bg-gradient-to-br from-teal-500 to-cyan-600 antialiased min-h-screen flex items-center justify-center p-6">
 
     <div class="max-w-2xl w-full bg-white/90 backdrop-blur rounded-2xl p-6 shadow-2xl text-center relative">
-      
       <!-- Logo -->
       <div class="flex justify-center mb-4">
-        <img src="/icon.svg" alt="SKV Logo" class="w-24 h-auto rounded-full shadow-md" />
+        <img src="images/logo.png" alt="SKV Logo" class="w-24 h-auto rounded-full shadow-md" />
       </div>
 
       <!-- Titles -->
-      <h1 class="text-4xl md:text-5xl font-bold text-green-900 mb-1">શ્રી કૃષ્ણ વિરાણી</h1>
-      <h3 class="text-lg md:text-xl font-semibold text-green-800 mb-4">પ્રાકૃતિક ફાર્મ</h3>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-green-900 mb-1">શ્રી કૃષ્ણ વિરાણી</h1>
+      <h3 class="text-xl md:text-2xl font-semibold text-green-700 mb-4">પ્રાકૃતિક ફાર્મ</h3>
 
-      <!-- Tagline -->
-      <div class="text-base text-gray-800 mb-6 font-medium">
+      <!-- About -->
+      <div class="text-base text-gray-800 mb-4 font-medium">
         <b>તમારૂ સ્વાસ્થ્ય અમારૂ ધ્યેય</b>
       </div>
 
@@ -85,64 +89,109 @@
       <!-- Products -->
       <h2 class="text-xl font-semibold text-green-800 mb-3">Products</h2>
       <div class="flex flex-wrap justify-center gap-4 mb-6">
-
-        <!-- Product Cards -->
-        <!-- Add more by copying this format -->
-        <div onclick="contactOnWhatsApp('ghee')" class="bg-green-100 rounded-lg px-4 py-3 w-28 flex flex-col items-center clickable-card">
+        <!-- ghee -->
+        <div onclick="contactOnWhatsApp('ghee')" class="bg-green-100 rounded-lg px-4 py-3 w-32 flex flex-col items-center clickable-card">
           <span class="text-3xl">🧈</span>
-          <span class="text-sm mt-1 text-center">દેશી ગાય નું ઘી</span>
-          <span class="text-sm">Cow Ghee</span>
-          <span class="text-sm">₹2000 (1L)</span>
+          <span class="text-sm mt-1">દેશી ગાય નું ઘી</span>
+          <span class="text-sm mt-1">Cow Ghee</span>
+          <span class="text-sm mt-1">₹2000 (1L)</span>
         </div>
 
-        <div onclick="contactOnWhatsApp('herbal')" class="bg-green-100 rounded-lg px-4 py-3 w-28 flex flex-col items-center clickable-card">
+        <!-- herbal powder -->
+        <div onclick="contactOnWhatsApp('herbal')" class="bg-green-100 rounded-lg px-4 py-3 w-32 flex flex-col items-center clickable-card">
           <span class="text-3xl">🌿</span>
           <span class="text-sm mt-1">હર્બલ પાવડર</span>
-          <span class="text-sm">Herbal Powder</span>
+          <span class="text-sm mt-1">Herbal Powder</span>
         </div>
 
-        <div onclick="contactOnWhatsApp('hadsar')" class="bg-green-100 rounded-lg px-4 py-3 w-28 flex flex-col items-center clickable-card">
-          <span class="text-3xl">🫚</span>
+        <!-- turmeric -->
+        <div onclick="contactOnWhatsApp('hadsar')" class="bg-green-100 rounded-lg px-4 py-3 w-32 flex flex-col items-center clickable-card">
+          <span class="text-3xl">🟡</span>
           <span class="text-sm mt-1">હળદર પાવડર</span>
-          <span class="text-sm">Turmeric</span>
-          <span class="text-sm">₹360 (1KG)</span>
+          <span class="text-sm mt-1">Turmeric Powder</span>
+          <span class="text-sm mt-1">₹360 (1 KG)</span>
         </div>
 
-        <!-- Example for other products using jeeru as placeholder -->
-        <!-- Repeat and modify as needed -->
-        <div onclick="contactOnWhatsApp('jeeru')" class="bg-green-100 rounded-lg px-4 py-3 w-28 flex flex-col items-center clickable-card">
-          <span class="text-3xl">🌾</span>
+        <!-- cumin -->
+        <div onclick="contactOnWhatsApp('jeeru')" class="bg-green-100 rounded-lg px-4 py-3 w-32 flex flex-col items-center clickable-card">
+          <span class="text-3xl">🌰</span>
           <span class="text-sm mt-1">જીરૂ</span>
-          <span class="text-sm">Cumin Seeds</span>
+          <span class="text-sm mt-1">Cumin Seeds</span>
         </div>
 
-        <div onclick="contactOnWhatsApp('jeeru')" class="bg-green-100 rounded-lg px-4 py-3 w-28 flex flex-col items-center clickable-card">
+        <!-- red chilli -->
+        <div onclick="contactOnWhatsApp('jeeru')" class="bg-green-100 rounded-lg px-4 py-3 w-32 flex flex-col items-center clickable-card">
           <span class="text-3xl">🌶️</span>
-          <span class="text-sm mt-1">લાલ મરચું</span>
-          <span class="text-sm">Red Chilli</span>
-          <span class="text-sm">₹500 (1KG)</span>
+          <span class="text-sm mt-1">લાલ મરચું પાવડર</span>
+          <span class="text-sm mt-1">Red Chilli Powder</span>
+          <span class="text-sm mt-1">₹500 (1 KG)</span>
         </div>
 
-        <!-- Add other product cards similarly... -->
+        <!-- methi -->
+        <div onclick="contactOnWhatsApp('jeeru')" class="bg-green-100 rounded-lg px-4 py-3 w-32 flex flex-col items-center clickable-card">
+          <span class="text-3xl">🍀</span>
+          <span class="text-sm mt-1">મેથી</span>
+          <span class="text-sm mt-1">Fenugreek</span>
+          <span class="text-sm mt-1">₹160 (1 KG)</span>
+        </div>
 
+        <!-- garlic -->
+        <div onclick="contactOnWhatsApp('jeeru')" class="bg-green-100 rounded-lg px-4 py-3 w-32 flex flex-col items-center clickable-card">
+          <span class="text-3xl">🧄</span>
+          <span class="text-sm mt-1">સુકું લસણ</span>
+          <span class="text-sm mt-1">Garlic</span>
+          <span class="text-sm mt-1">₹200 (1 KG)</span>
+        </div>
+
+        <!-- chickpeas -->
+        <div onclick="contactOnWhatsApp('jeeru')" class="bg-green-100 rounded-lg px-4 py-3 w-32 flex flex-col items-center clickable-card">
+          <span class="text-3xl">🌰</span>
+          <span class="text-sm mt-1">દેશી ચણા</span>
+          <span class="text-sm mt-1">Chickpeas</span>
+          <span class="text-sm mt-1">₹120 (1 KG)</span>
+        </div>
+
+        <!-- juvar -->
+        <div onclick="contactOnWhatsApp('jeeru')" class="bg-green-100 rounded-lg px-4 py-3 w-32 flex flex-col items-center clickable-card">
+          <span class="text-3xl">🌽</span>
+          <span class="text-sm mt-1">જુવાર</span>
+          <span class="text-sm mt-1">Sorghum</span>
+          <span class="text-sm mt-1">₹100 (1 KG)</span>
+        </div>
+
+        <!-- ragi -->
+        <div onclick="contactOnWhatsApp('jeeru')" class="bg-green-100 rounded-lg px-4 py-3 w-32 flex flex-col items-center clickable-card">
+          <span class="text-3xl">🌾</span>
+          <span class="text-sm mt-1">રાગી</span>
+          <span class="text-sm mt-1">Ragi</span>
+          <span class="text-sm mt-1">₹100 (1 KG)</span>
+        </div>
       </div>
 
-      <!-- Contact Section -->
+      <!-- Contact -->
       <h2 class="text-xl font-semibold text-green-800 mb-2">Contact</h2>
-      <div class="text-gray-800 text-sm space-y-2 mb-4">
-        <div><strong>BabuBhai Virani</strong> | <a href="tel:+919979778896">+91 99797 78896</a></div>
-        <div><strong>RekhaBen Virani</strong> | <a href="tel:+919265794797">+91 92657 94797</a></div>
-        <div><strong>Keyur Virani (SURAT)</strong> | <a href="tel:+918128584184">+91 81285 84184</a></div>
+      <div class="text-gray-800 text-sm space-y-2">
+        <div>
+          <strong>BabuBhai Virani</strong> |
+          <a href="tel:+919979778896">+91 99797 78896</a>
+        </div>
+        <div>
+          <strong>RekhaBen Virani</strong> |
+          <a href="tel:+919265794797">+91 92657 94797</a>
+        </div>
+        <div>
+          <strong>Keyur Virani (SURAT)</strong> |
+          <a href="tel:+918128584184">+91 81285 84184</a>
+        </div>
       </div>
 
       <!-- Address -->
-      <h2 class="text-xl font-semibold text-green-800 mb-2">Address</h2>
+      <h2 class="text-xl font-semibold text-green-800 mt-6 mb-2">Address</h2>
       <div class="text-gray-800 text-sm">
-        <a href="https://www.google.com/maps/place/Shree+Krishna+virani+prakrutik+farm" target="_blank">
+        <a href="https://www.google.com/maps/place/Shree+Krishna+virani+prakrutik+farm/@21.911419,71.5769852,17z">
           <strong>મુ. રળીયાણા, તા. ગઢડા (સ્વા.), જી. બોટાદ.</strong>
         </a>
       </div>
     </div>
-
   </body>
 </html>
