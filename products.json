@@ -1,0 +1,24 @@
+[
+  {
+    "id": "ghee",
+    "emoji": "🍯",
+    "gujarati": "દેશી ગાય નું વલોણાનુ શુધ્ધ ઘી",
+    "english": "Cow Ghee",
+    "price": "₹2000 (1L)"
+  },
+  {
+    "id": "gram",
+    "emoji": "🌰",
+    "gujarati": "દેશી ચણા",
+    "english": "Gram",
+    "price": "₹120 (1 KG)"
+  },
+  {
+    "id": "turmeric",
+    "emoji": "🟡",
+    "gujarati": "હળદર પાવડર",
+    "english": "Turmeric Powder",
+    "price": "₹360 (1 KG)"
+  }
+  // Add more items as needed
+]
