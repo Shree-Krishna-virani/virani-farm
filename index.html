@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Shree Krishna Virani</title>
   <meta name="description" content="SKV - Organic Farm Products" />
-  <link rel="icon" href="logo.jpeg" />
+  <link rel="icon" href="images/logo.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .clickable-card {
@@ -18,52 +18,151 @@
     }
   </style>
   <script>
+    // Product data embedded here for easy editing without backend
+    const products = [
+      {
+        id: "ghee",
+        emoji: "🍯",
+        gujarati: "દેશી ગાય નું વલોણાનુ શુધ્ધ ઘી",
+        english: "Cow Ghee",
+        price: "₹2000 (1L)"
+      },
+      {
+        id: "jeeru",
+        emoji: "🌰",
+        gujarati: "દેશી ચણા",
+        english: "Gram",
+        price: "₹120 (1 KG)"
+      },
+      {
+        id: "hadsar",
+        emoji: "🟡",
+        gujarati: "હળદર પાવડર",
+        english: "Turmeric Powder",
+        price: "₹360 (1 KG)"
+      },
+      {
+        id: "redchilli",
+        emoji: "🌶️",
+        gujarati: "લાલ મરચું પાવડર",
+        english: "Red Chilli Powder",
+        price: "₹500 (1 KG)"
+      },
+      {
+        id: "methi",
+        emoji: "🍀",
+        gujarati: "મેથી",
+        english: "Fenugreek",
+        price: "₹160 (1 KG)"
+      },
+      {
+        id: "garlic",
+        emoji: "🧄",
+        gujarati: "સુકું લસણ",
+        english: "Garlic",
+        price: "₹200 (1 KG)"
+      },
+      {
+        id: "juvar",
+        emoji: "🌾",
+        gujarati: "જુવાર",
+        english: "Sorghum",
+        price: "₹100 (1 KG)"
+      },
+      {
+        id: "ragi",
+        emoji: "🌾",
+        gujarati: "રાગી",
+        english: "Ragi",
+        price: "₹100 (1 KG)"
+      }
+    ];
+
+    // WhatsApp message templates for products
+    const messages = {
+      ghee: {
+        gu: "હાય! મને દેશી ઘી વિશે માહિતી જોઈતી હતી.",
+        hi: "नमस्ते! मुझे देसी घी के बारे में जानकारी चाहिए।",
+        en: "Hi! I would like to know more about Desi Ghee."
+      },
+      jeeru: {
+        gu: "હાય! મને ચણા વિશે માહિતી જોઈતી હતી.",
+        hi: "नमस्ते! मुझे चना के बारे में जानकारी चाहिए।",
+        en: "Hi! I would like to know more about Gram."
+      },
+      hadsar: {
+        gu: "હાય! મને હળદર પાવડર વિશે માહિતી જોઈતી હતી.",
+        hi: "नमस्ते! मुझे हलदी के बारे में जानकारी चाहिए।",
+        en: "Hi! I would like to know more about Turmeric Powder."
+      },
+      redchilli: {
+        gu: "હાય! મને લાલ મરચું પાવડર વિશે માહિતી જોઈતી હતી.",
+        hi: "नमस्ते! मुझे लाल मिर्च पाउडर के बारे में जानकारी चाहिए।",
+        en: "Hi! I would like to know more about Red Chilli Powder."
+      },
+      methi: {
+        gu: "હાય! મને મેથી વિશે માહિતી જોઈતી હતી.",
+        hi: "नमस्ते! मुझे मेथी के बारे में जानकारी चाहिए।",
+        en: "Hi! I would like to know more about Fenugreek."
+      },
+      garlic: {
+        gu: "હાય! મને સુકું લસણ વિશે માહિતી જોઈતી હતી.",
+        hi: "नमस्ते! मुझे सुखा हुआ लहसुन के बारे में जानकारी चाहिए।",
+        en: "Hi! I would like to know more about Garlic."
+      },
+      juvar: {
+        gu: "હાય! મને જુવાર વિશે માહિતી જોઈતી હતી.",
+        hi: "नमस्ते! मुझे ज्वार के बारे में जानकारी चाहिए।",
+        en: "Hi! I would like to know more about Sorghum."
+      },
+      ragi: {
+        gu: "હાય! મને રાગી વિશે માહિતી જોઈતી હતી.",
+        hi: "नमस्ते! मुझे रागी के बारे में जानकारी चाहिए।",
+        en: "Hi! I would like to know more about Ragi."
+      }
+    };
+
     function contactOnWhatsApp(productId) {
-      const messages = {
-        ghee: {
-          gu: "હાય! મને દેશી ઘી વિશે માહિતી જોઈતી હતી.",
-          hi: "नमस्ते! मुझे देसी घी के बारे में जानकारी चाहिए।",
-          en: "Hi! I would like to know more about Desi Ghee."
-        },
-        gram: {
-          gu: "હાય! મને ચણા વિશે માહિતી જોઈતી હતી.",
-          hi: "नमस्ते! मुझे चना के बारे में जानकारी चाहिए।",
-          en: "Hi! I would like to know more about gram."
-        },
-        turmeric: {
-          gu: "હાય! મને હળદર વિશે માહિતી જોઈતી હતી.",
-          hi: "नमस्ते! मुझे हलदी के बारे में जानकारी चाहिए।",
-          en: "Hi! I would like to know more about turmeric."
-        }
-      };
-
-      const input = prompt("Select Language:\n1 - Gujarati\n2 - Hindi\n3 - English");
-      const langMap = { 1: 'gu', 2: 'hi', 3: 'en' };
-
-      if (!input || !langMap[input]) {
+      const langChoice = prompt("Select Language:\n1 - Gujarati\n2 - Hindi\n3 - English");
+      const langMap = { "1": "gu", "2": "hi", "3": "en" };
+      if (!langChoice || !langMap[langChoice]) {
         alert("Invalid input. Please enter 1, 2, or 3.");
         return;
       }
-
-      const lang = langMap[input];
-      const message = encodeURIComponent(
-        messages[productId]?.[lang] || "Hi! I would like to know more about your product."
-      );
+      const lang = langMap[langChoice];
+      const msg = messages[productId]?.[lang] || "Hi! I would like to know more about your product.";
+      const encodedMsg = encodeURIComponent(msg);
       const phoneNumber = "918128584184";
-      window.location.href = `https://wa.me/${phoneNumber}?text=${message}`;
+      window.location.href = `https://wa.me/${phoneNumber}?text=${encodedMsg}`;
     }
+
+    // On page load, dynamically add product cards
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.getElementById("product-container");
+      products.forEach(product => {
+        const card = document.createElement("div");
+        card.className = "bg-green-100 rounded-lg px-4 py-3 w-32 flex flex-col items-center clickable-card";
+        card.onclick = () => contactOnWhatsApp(product.id);
+        card.innerHTML = `
+          <span class="text-3xl">${product.emoji}</span>
+          <span class="text-sm mt-1">${product.gujarati}</span>
+          <span class="text-sm mt-1">${product.english}</span>
+          <span class="text-sm mt-1">${product.price}</span>
+        `;
+        container.appendChild(card);
+      });
+    });
   </script>
 </head>
 <body class="bg-gradient-to-br from-teal-500 to-cyan-600 antialiased min-h-screen flex items-center justify-center p-6">
   <div class="max-w-2xl w-full bg-white/90 backdrop-blur rounded-2xl p-6 shadow-2xl text-center relative">
-
     <!-- Logo -->
     <div class="flex justify-center mb-4">
       <img src="logo.jpeg" alt="SKV Logo" class="w-24 h-auto rounded-full shadow-md" />
     </div>
 
     <!-- Titles -->
-    <h1 class="text-4xl md:text-5xl font-extrabold text-green-900 mb-1">શ્રી કૃષ્ણ વિરાણી1</h1>
+    <h1 class="text-4xl md:text-5xl font-extrabold text-green-900 mb-1">શ્રી કૃષ્ણ વિરાણી</h1>
     <h3 class="text-xl md:text-2xl font-semibold text-green-700 mb-4">પ્રાકૃતિક ફાર્મ</h3>
 
     <!-- Award Image -->
@@ -82,45 +181,33 @@
       Farm No. GJ143005147001
     </div>
 
-    <!-- Products (Dynamic) -->
+    <!-- Products -->
     <h2 class="text-xl font-semibold text-green-800 mb-3">Products</h2>
-    <div id="product-container" class="flex flex-wrap justify-center gap-4 mb-6"></div>
-
-    <script>
-      fetch('products.json')
-        .then(response => response.json())
-        .then(products => {
-          const container = document.getElementById('product-container');
-          products.forEach(product => {
-            const card = document.createElement('div');
-            card.className = "bg-green-100 rounded-lg px-4 py-3 w-32 flex flex-col items-center clickable-card";
-            card.onclick = () => contactOnWhatsApp(product.id);
-            card.innerHTML = `
-              <span class="text-3xl">${product.emoji}</span>
-              <span class="text-sm mt-1">${product.gujarati}</span>
-              <span class="text-sm mt-1">${product.english}</span>
-              <span class="text-sm mt-1">${product.price}</span>
-            `;
-            container.appendChild(card);
-          });
-        })
-        .catch(error => {
-          console.error('Error loading products:', error);
-        });
-    </script>
+    <div id="product-container" class="flex flex-wrap justify-center gap-4 mb-6">
+      <!-- Products will be dynamically inserted here -->
+    </div>
 
     <!-- Contact -->
     <h2 class="text-xl font-semibold text-green-800 mb-2">Contact</h2>
     <div class="text-gray-800 text-sm space-y-2">
-      <div><strong>BabuBhai Virani</strong> | <a href="tel:+919979778896">+91 99797 78896</a></div>
-      <div><strong>RekhaBen Virani</strong> | <a href="tel:+919265794797">+91 92657 94797</a></div>
-      <div><strong>Keyur Virani (SURAT)</strong> | <a href="tel:+918128584184">+91 81285 84184</a></div>
+      <div>
+        <strong>BabuBhai Virani</strong> |
+        <a href="tel:+919979778896">+91 99797 78896</a>
+      </div>
+      <div>
+        <strong>RekhaBen Virani</strong> |
+        <a href="tel:+919265794797">+91 92657 94797</a>
+      </div>
+      <div>
+        <strong>Keyur Virani (SURAT)</strong> |
+        <a href="tel:+918128584184">+91 81285 84184</a>
+      </div>
     </div>
 
     <!-- Address -->
     <h2 class="text-xl font-semibold text-green-800 mt-6 mb-2">Address</h2>
     <div class="text-gray-800 text-sm">
-      <a href="https://www.google.com/maps/place/Shree+Krishna+virani+prakrutik+farm/@21.911419,71.5769852,17z">
+      <a href="https://www.google.com/maps/place/Shree+Krishna+virani+prakrutik+farm/@21.911419,71.5769852,17z/data=!3m1!4b1!4m6!3m5!1s0x3958bfde65df4f91:0xefbf60ed4c25462e!8m2!3d21.911419!4d71.5769852!16s%2Fg%2F11gb3zh8zl?entry=ttu&g_ep=EgoyMDI1MDQyMS4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D">
         <strong>મુ. રળીયાણા, તા. ગઢડા (સ્વા.), જી. બોટાદ.</strong>
       </a>
     </div>
